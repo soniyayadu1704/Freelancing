@@ -39,7 +39,7 @@ return(
 id="projects"
 
 className="
-max-w-[1200px]
+max-w-[1400px]
 mx-auto
 mt-20
 px-6
