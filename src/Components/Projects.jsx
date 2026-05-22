@@ -6,11 +6,7 @@ title:"Luxury Landing Page",
 
 stack:"React • Tailwind",
 
-img:"/project1.jpg",
-
-website:"https://your-live-site.com",
-
-caseStudy:"/case-study/project1"
+img:"/project1.png",
 
 },
 
@@ -20,11 +16,7 @@ title:"Business Website",
 
 stack:"React • UI Design",
 
-img:"/project2.jpg",
-
-website:"https://your-live-site.com",
-
-caseStudy:"/case-study/project2"
+img:"/project2.png",
 
 },
 
@@ -36,10 +28,6 @@ stack:"React • Animation",
 
 img:"/project3.jpg",
 
-website:"https://your-live-site.com",
-
-caseStudy:"/case-study/project3"
-
 },
 
 {
@@ -49,10 +37,6 @@ title:"Startup Website",
 stack:"React • Framer Motion",
 
 img:"/project4.jpg",
-
-website:"https://your-live-site.com",
-
-caseStudy:"/case-study/project4"
 
 }
 
@@ -258,54 +242,6 @@ sm:flex-row
 gap-4
 "
 >
-
-<a
-
-href={project.caseStudy}
-
-className="
-bg-[#66579a]
-text-white
-text-center
-px-8
-py-4
-rounded-full
-hover:scale-105
-transition
-"
-
->
-
-Case Study
-
-</a>
-
-
-
-<a
-
-href={project.website}
-
-target="_blank"
-
-className="
-border
-border-[#66579a]
-text-[#66579a]
-text-center
-px-8
-py-4
-rounded-full
-hover:bg-[#66579a]
-hover:text-white
-transition
-"
-
->
-
-Visit Website
-
-</a>
 
 </div>
 

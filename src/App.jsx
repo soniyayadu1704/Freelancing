@@ -5,11 +5,10 @@ Route
 } from "react-router-dom"
 
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 import Home from "./pages/Home"
-
 import Contact from "./components/Contact"
-
 import HireUs from "./pages/HireUs"
 
 export default function App(){
@@ -45,8 +44,14 @@ element={<Contact/>}
 path="/hire"
 element={<HireUs/>}
 />
+<Route
+path="/contact"
+element={<Contact/>}
+/>
 
 </Routes>
+
+<Footer/>
 
 </div>
 

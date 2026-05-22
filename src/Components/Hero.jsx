@@ -17,7 +17,7 @@ className="
 relative
 rounded-[55px]
 overflow-hidden
-h-[760px]
+h-[780px]
 "
 >
 
