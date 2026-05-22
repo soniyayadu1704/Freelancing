@@ -3,33 +3,32 @@ export default function About(){
 return(
 
 <section
-
 id="about"
-
 className="
 max-w-[1450px]
 mx-auto
 mt-32
 px-6
 "
-
 >
 
 <div
 className="
+relative
+overflow-hidden
+
 rounded-[50px]
 
 bg-gradient-to-br
-
 from-[#f3efff]
-
 to-[#ebe3ff]
 
-p-12
-
-md:p-20
+p-10
+md:p-16
 
 shadow-xl
+
+min-h-[520px]
 "
 >
 
@@ -38,6 +37,9 @@ className="
 uppercase
 tracking-[5px]
 text-[#7a61ba]
+
+relative
+z-20
 "
 >
 
@@ -57,12 +59,17 @@ font-black
 text-[#2c214b]
 
 mt-4
+
+max-w-[700px]
+
+relative
+z-20
 "
 >
 
-Creating
+Creating Digital
 
-Digital
+<br/>
 
 Experiences
 
@@ -70,15 +77,18 @@ Experiences
 
 <p
 className="
-mt-10
+mt-8
 
-max-w-[700px]
+max-w-[560px]
 
 text-[#645b84]
 
 leading-9
 
 text-lg
+
+relative
+z-20
 "
 >
 
@@ -88,6 +98,33 @@ focused on performance, aesthetics and
 creating experiences that convert.
 
 </p>
+
+<img
+src="/about.jpeg"
+alt="Developer"
+
+className="
+absolute
+
+bottom-0
+right-[-40px]
+
+w-[280px]
+md:w-[520px]
+
+object-contain
+
+mix-blend-multiply
+
+opacity-95
+
+pointer-events-none
+
+select-none
+
+z-10
+"
+/>
 
 </div>
 

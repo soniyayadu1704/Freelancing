@@ -1,48 +1,36 @@
+import { useNavigate } from "react-router-dom"
+
 const projects=[
 
 {
-
 title:"Luxury Landing Page",
-
 stack:"React • Tailwind",
-
 img:"/project1.png",
-
 },
 
 {
-
 title:"Business Website",
-
 stack:"React • UI Design",
-
 img:"/project2.png",
-
 },
 
 {
-
 title:"Creative Portfolio",
-
 stack:"React • Animation",
-
 img:"/project3.jpg",
-
 },
 
 {
-
 title:"Startup Website",
-
 stack:"React • Framer Motion",
-
 img:"/project4.jpg",
-
 }
 
 ]
 
 export default function Projects(){
+
+const navigate=useNavigate()
 
 return(
 
@@ -51,9 +39,9 @@ return(
 id="projects"
 
 className="
-max-w-[1450px]
+max-w-[1200px]
 mx-auto
-mt-32
+mt-20
 px-6
 "
 
@@ -65,8 +53,8 @@ flex
 flex-col
 md:flex-row
 justify-between
-gap-8
-mb-14
+gap-6
+mb-10
 "
 >
 
@@ -86,8 +74,8 @@ Selected Work
 
 <h2
 className="
-text-[54px]
-md:text-[88px]
+text-[40px]
+md:text-[64px]
 leading-[0.9]
 font-black
 text-[#2b214c]
@@ -110,12 +98,14 @@ Projects
 
 
 
+
+
 <div
 className="
 grid
 grid-cols-1
 md:grid-cols-2
-gap-8
+gap-5
 "
 >
 
@@ -129,15 +119,25 @@ key={index}
 
 className="
 group
-rounded-[36px]
+
+rounded-[28px]
+
 overflow-hidden
+
 bg-white/50
+
 backdrop-blur-xl
+
 border
+
 border-white
-shadow-xl
-hover:-translate-y-3
+
+shadow-[0_20px_60px_rgba(120,95,180,.10)]
+
+hover:-translate-y-2
+
 transition
+duration-500
 "
 
 >
@@ -148,54 +148,23 @@ transition
 
 src={project.img}
 
+alt={project.title}
+
 className="
 w-full
-h-[260px]
-md:h-[420px]
+
+h-[220px]
+md:h-[300px]
+
 object-cover
+
 group-hover:scale-105
+
 transition
 duration-700
 "
 
 />
-
-<a
-
-href={project.website}
-
-target="_blank"
-
-className="
-absolute
-top-5
-right-5
-
-w-[65px]
-h-[65px]
-
-bg-white/70
-
-rounded-full
-
-flex
-
-items-center
-
-justify-center
-
-text-3xl
-
-hover:rotate-45
-
-transition
-"
-
->
-
-↗
-
-</a>
 
 </div>
 
@@ -203,13 +172,17 @@ transition
 
 
 
-<div className="p-8">
+
+
+<div className="p-6">
 
 <h3
 className="
-text-[32px]
-md:text-[42px]
+text-[24px]
+md:text-[32px]
+
 font-black
+
 text-[#2b214c]
 "
 >
@@ -220,7 +193,7 @@ text-[#2b214c]
 
 <p
 className="
-mt-3
+mt-2
 text-[#6a6287]
 "
 >
@@ -229,22 +202,6 @@ text-[#6a6287]
 
 </p>
 
-
-
-
-
-<div
-className="
-mt-8
-flex
-flex-col
-sm:flex-row
-gap-4
-"
->
-
-</div>
-
 </div>
 
 </div>
@@ -252,6 +209,71 @@ gap-4
 ))
 
 }
+
+</div>
+
+
+
+
+
+
+
+<div
+className="
+flex
+justify-center
+mt-10
+"
+>
+
+<button
+
+onClick={()=>
+navigate("/project")
+}
+
+className="
+group
+
+bg-gradient-to-r
+
+from-[#8168d2]
+to-[#5d458e]
+
+text-white
+
+px-10
+py-4
+
+rounded-full
+
+hover:scale-105
+
+hover:shadow-[0_20px_60px_rgba(115,91,170,.35)]
+
+transition
+duration-500
+"
+>
+
+View More Projects
+
+<span
+className="
+inline-block
+ml-2
+
+group-hover:translate-x-2
+
+transition
+"
+>
+
+→
+
+</span>
+
+</button>
 
 </div>
 

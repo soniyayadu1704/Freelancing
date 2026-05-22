@@ -6,9 +6,8 @@ Route
 
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-
+import ProjectsPage from "./pages/ProjectsPage"
 import Home from "./pages/Home"
-import Contact from "./components/Contact"
 import HireUs from "./pages/HireUs"
 
 export default function App(){
@@ -36,18 +35,15 @@ element={<Home/>}
 />
 
 <Route
-path="/contact"
-element={<Contact/>}
+path="/project"
+element={<ProjectsPage/>}
 />
 
 <Route
 path="/hire"
 element={<HireUs/>}
 />
-<Route
-path="/contact"
-element={<Contact/>}
-/>
+
 
 </Routes>
 

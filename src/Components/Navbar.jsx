@@ -6,6 +6,30 @@ const navigate=useNavigate()
 
 const scrollTo=(id)=>{
 
+if(window.location.pathname!=="/"){
+
+navigate("/")
+
+setTimeout(()=>{
+
+const section=document.getElementById(id)
+
+if(section){
+
+section.scrollIntoView({
+
+behavior:"smooth"
+
+})
+
+}
+
+},300)
+
+return
+
+}
+
 const section=document.getElementById(id)
 
 if(section){
@@ -36,9 +60,7 @@ z-50
 <div
 className="
 relative
-
 overflow-hidden
-
 rounded-[34px]
 
 px-8
@@ -47,7 +69,6 @@ md:px-14
 py-5
 
 flex
-
 flex-wrap
 
 justify-between
@@ -61,27 +82,19 @@ bg-white/40
 backdrop-blur-xl
 
 border
-
 border-white
 
 shadow-[0_30px_80px_rgba(120,95,180,.12)]
 "
 >
 
-
-
-
-
 <div
 className="
 absolute
-
 top-[-100px]
-
 left-[20%]
 
 w-[320px]
-
 h-[250px]
 
 bg-[#d8cfff]
@@ -116,17 +129,10 @@ opacity-30
 "
 />
 
-
-
-
-
-
-
 <h1
 
 className="
 relative
-
 z-10
 
 text-[38px]
@@ -140,11 +146,8 @@ tracking-[-2px]
 cursor-pointer
 
 bg-gradient-to-r
-
 from-[#8a75d9]
-
 via-[#705aa9]
-
 to-[#43306f]
 
 bg-clip-text
@@ -158,13 +161,7 @@ transition
 
 onClick={()=>
 
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-})
+scrollTo("hero")
 
 }
 
@@ -173,14 +170,6 @@ behavior:"smooth"
 hey.. start
 
 </h1>
-
-
-
-
-
-
-
-
 
 <nav
 className="
@@ -201,7 +190,9 @@ font-medium
 <button
 
 onClick={()=>
-scrollTo("hero")
+
+scrollTo("about")
+
 }
 
 className="
@@ -227,21 +218,18 @@ hover:after:w-full
 
 after:transition-all
 "
-
 >
 
 About
 
 </button>
 
-
-
-
-
 <button
 
 onClick={()=>
+
 scrollTo("projects")
+
 }
 
 className="
@@ -267,23 +255,18 @@ hover:after:w-full
 
 after:transition-all
 "
-
 >
 
 Projects
 
 </button>
 
-
-
-
-
-
-
 <button
 
 onClick={()=>
-navigate("/contact")
+
+scrollTo("contact")
+
 }
 
 className="
@@ -309,7 +292,6 @@ hover:after:w-full
 
 after:transition-all
 "
-
 >
 
 Contact
@@ -318,18 +300,12 @@ Contact
 
 </nav>
 
-
-
-
-
-
-
-
-
 <button
 
 onClick={()=>
-navigate("/hire")
+
+scrollTo("contact")
+
 }
 
 className="
@@ -340,13 +316,11 @@ z-10
 bg-gradient-to-r
 
 from-[#8168d2]
-
 to-[#5d458e]
 
 text-white
 
 px-8
-
 py-4
 
 rounded-full
@@ -357,7 +331,6 @@ hover:shadow-[0_20px_60px_rgba(115,91,170,.35)]
 
 transition
 "
-
 >
 
 Hire Us →
