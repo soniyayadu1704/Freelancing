@@ -1,5 +1,6 @@
 import Hero from "../components/Hero"
 import About from "../components/About"
+import Process from "../Components/Process"
 import WhyChoose from "../components/WhyChoose"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
@@ -13,6 +14,7 @@ return(
 <Hero/>
 
 <About/>
+<Process/>
 
 <WhyChoose/>
 
